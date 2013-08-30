@@ -1,0 +1,78 @@
+* { margin: 0; padding: 0; box-sizing: border-box; -moz-box-sizing: border-box; }
+body{ padding: 120px 10px; font: 13px/17px "Trebuchet MS", Tahoma, Verdana, Arial, sans-serif; color: #333; background: #999 inline-image('bgrd.png'); }
+.cleaner { clear: both; }
+.spacer { height: 20px; }
+
+#container { margin: 0 auto; width: 900px; }
+.information-set { position: relative; clear: both; margin: 0 0 80px 0; background: #FFF; border: 1px solid #666; }
+.inner	{ padding: 10px; border: 7px solid #EEE; }
+
+.icon { position: absolute; top: -50px; right: 30px; z-index: 5; }
+
+h1 { font-size: 50px; margin: 0 0 40px 0; color: #FFF; text-shadow: #000 0px 0px 2px; }
+h2 { font-size: 20px; margin: -17px -10px 0; padding: 10px; overflow: hidden; background: #EEE; border-bottom: 1px solid #BBB; }
+h3 { font-size: 17px; margin: 10px 0 5px 0; }
+h4 { font-size: 13px; margin: 5px 0 5px 0; }
+
+h2 a { font-size: 13px; line-height: 11px; }
+h3 span { font-weight: normal; }
+
+a { color: #009; font-weight: normal; text-decoration: none; outline: none; }
+a:hover { text-decoration: underline; }
+
+ul { overflow: hidden; margin: 0 0 5px 0; }
+li { padding: 5px 20px 5px 17px; list-style: none; background: inline-image('control-000-small.png') 0 5px no-repeat; }
+.responsibilities	li { background: inline-image('tick-small-white.png') 0 6px no-repeat; }
+.awards				li { padding: 0 0 0 22px; background: inline-image('trophy.png') 0 center no-repeat; }
+.project-work		li { padding: 0 0 0 17px; font-size: 11px; background-position: 0 center; }
+
+dl { overflow: hidden; }
+dt, dd { padding: 0 10px; border-bottom: 1px solid #DDD; }
+dt { clear: left; font-weight: bold; }
+dd { }
+
+#photo { float: left; padding: 7px; background: #FFF; border: 1px solid #666; }
+#contacts-info
+{
+	overflow: hidden; clear: none; margin-left: 162px;
+	dt { float: left; width: 20%; }
+	dd { float: left; width: 80%; }
+	p { padding: 10px 10px 0; text-align: justify; }
+}
+
+.skills-category { clear: both; float: left; width: 160px; margin: 30px 0 0 0; padding: 0 0 0 5px; line-height: 21px; border-top: 1px solid #DDD; }
+#skills
+{
+	dl { margin: 30px 0 0 160px; line-height: 21px; border: 1px solid #DDD; border-bottom: none; }
+	dt { float: left; width: 50%; font-weight: normal; }
+	dd { float: left; width: 25%; }
+	.lvl { float: left; width: 16px; height: 16px; margin: 3px 0 2px; background: inline-image('light-bulb.png') 0 0 no-repeat; }
+	.lvl.n { background-image: inline-image('light-bulb-off.png'); }
+	ul { margin: 30px 5px 0 160px; padding: 0 10px; border: 1px solid #DDD; }
+	li { float: left; padding-top: 0; padding-bottom: 0; line-height: 21px; background: inline-image('tick-small-white.png') 0 center no-repeat; }
+}
+
+.projects
+{
+	dt 	{ float: left; width: 30%; margin: 10px 0; padding: 10px 10px 2px; background: #EEE; border-right: 1px solid #DDD; }
+	dt a 	{ display: block; font-size: 11px; line-height: 21px; }
+	dd 	{ float: left; width: 70%; margin: 10px 0; border-bottom: none; }
+	dd p 	{ margin-bottom: 5px; }
+}
+
+.tabs
+{
+	position: relative; float: left; width: 179px; z-index: 10;
+	ul { margin: 0; }
+	li { padding: 0; background: #CCC; border-right: 1px solid #666; margin-bottom: 3px; border: 1px solid #555; }
+	li.selected { background: #EEE; border-color: #666; border-right: none; }
+	a { display: block; padding: 10px 10px; }
+}
+
+.tab-containers { margin: 0 0 0 178px; }
+.tab-cnt
+{
+	display: none; clear: none;
+	&.selected { display: block; }
+	> .inner { min-height: 200px; }
+}
