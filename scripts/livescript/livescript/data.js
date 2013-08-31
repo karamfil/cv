@@ -1,6 +1,8 @@
 var DATA;
 DATA = {
   contacts: {
+    name: 'Alexander Ivanov',
+    img: '',
     details: {
       Name: 'Alexander Antonov Ivanov',
       Nickname: 'Karamfil',
@@ -9,7 +11,6 @@ DATA = {
       Email: 'a.ivanov@avalith.bg',
       'Date of birth': '26th August 1987'
     },
-    img: '',
     bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede'
   },
   education: [
@@ -146,23 +147,125 @@ DATA = {
         awards: [['Webby', 2011, 'http://'], ['WebAward', 2011, 'http://']]
       }]
     }, {
-      company: 'Avalith',
-      url: 'http://www.avalith.bg/',
-      positions: [{
-        position: 1,
-        date: {
-          from: 1,
-          to: 2
-        },
-        tasks: ['Manage company', 'Manage web department & projects']
-      }],
+      company: 'Antipodes',
+      url: 'http://www.antipodes.bg/',
+      positions: [
+        {
+          position: 'Head of Web Department',
+          date: {
+            from: 'October 2010',
+            to: 'December 2011'
+          },
+          tasks: ['Manage web department & projects', 'Lead, guide and train a team of developers', 'Incorporate the usage PHP MVC based framework with ORM, Active Record, Smarty template engine and multilingual support', 'Engineer and develop PHP/MySQL(MariaDB) web based sites and systems using MVC framework', 'Engineer and develop Google App Engine/Python Sites using Django MVC framework', 'Support and performance optimization of old and current projects', 'Implement Javascript, AJAX and Google Maps functionality', 'xHTML/CSS coding']
+        }, {
+          position: 'Senior and Team Leader Developer',
+          date: {
+            from: 'March 2008',
+            to: 'October 2010'
+          },
+          tasks: ['Lead, guide and train a team of developers', 'Incorporate the usage PHP MVC based framework with ORM, Active Record, Smarty template engine and multilingual support', 'Engineer and develop PHP/MySQL(MariaDB) web based sites and systems using MVC framework', 'Support and performance optimization of old and current projects', 'Implement Javascript, AJAX', 'xHTML/CSS coding']
+        }
+      ],
       projects: [{
         title: 'Drop The C-Bomb',
         url: 'http://',
         description: 'asd',
-        tasks: ['System Architecture', 'Database Design'],
-        awards: [['Webby', 2011, 'http://'], ['WebAward', 2011, 'http://']]
+        tasks: ['System Architecture', 'Database Design']
       }]
+    }, {
+      company: 'Mag Studio',
+      url: 'http://www.magstudio.bg/',
+      positions: [{
+        position: 'Developer',
+        date: {
+          from: 'April 2007',
+          to: 'March 2008'
+        },
+        tasks: ['Development and support of PHP/MySQL(and PostgreSQL) web based sites and systems', 'Implement Javascript, AJAX functionality', 'xHTML/CSS coding']
+      }],
+      projects: [
+        {
+          title: 'Neterra',
+          url: 'http://www.neterra.net/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'CSS/XHTML Development', 'Design Fixes']
+        }, {
+          title: 'Megatron Leasing',
+          url: 'http://www.ecopack.bg/kids/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'CSS/XHTML Development']
+        }, {
+          title: 'Ecopack - Kids',
+          url: 'http://www.neterra.net/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'CSS/XHTML Development', 'Design Fixes']
+        }, {
+          title: 'Nutrition Grove',
+          url: 'http://www.nutritiongrove.com/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'CSS/XHTML Development']
+        }, {
+          title: 'Bulgarian National Audit Office',
+          url: 'http://www.bulnao.government.bg/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development']
+        }, {
+          title: 'Communications Regulation Commission',
+          url: 'http://www.crc.bg/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development']
+        }, {
+          title: 'Industrial Holding Bulgaria',
+          url: 'http://www.bulgariaholding.com/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development']
+        }, {
+          title: 'Game Club Cafe',
+          url: 'http://www.gameclubcafe.com/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'CSS/XHTML Support']
+        }, {
+          title: 'Royal Yacht',
+          url: 'http://www.royalyacht.bg/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development']
+        }, {
+          title: 'CocaCola PDA',
+          url: '',
+          description: 'TO BE DESCRIBED',
+          tasks: 'PHP Support'
+        }, {
+          title: '"Manager" Magazine',
+          url: 'http://www.manager.bg/',
+          description: 'TO BE DESCRIBED',
+          tasks: 'PHP/MySQL Support'
+        }, {
+          title: 'Karoll',
+          url: 'http://www.karoll.net/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['PHP/MySQL Support', 'Javascript Support', 'CSS/XHTML Support']
+        }, {
+          title: 'Balkan Captial Management',
+          url: 'http://www.bacm.bg/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['PHP/MySQL Support', 'CSS/XHTML Support']
+        }, {
+          title: 'Bulgarian American Credit Bank',
+          url: 'http://www.bacb.bg/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['PHP/MySQL Support', 'Javascript Support']
+        }, {
+          title: 'BT Collection - Paradise Beach',
+          url: 'http://www.paradisebeach.bg/',
+          description: 'TO BE DESCRIBED',
+          tasks: 'PHP/MySQL Support'
+        }, {
+          title: 'Balkan Tourist Development Services',
+          url: 'http://www.bt-ds.com/',
+          description: 'TO BE DESCRIBED',
+          tasks: 'PHP/MySQL Support'
+        }
+      ]
     }, {
       company: 'Epsilon Interactive International',
       url: 'http://www.epsilon.com/',
