@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="styles/screen.css">
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<!-- angular -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 <script type="text/javascript" src="scripts/js/interface.js"></script>
 
 </head>
@@ -19,32 +19,22 @@
 	<img id="photo" alt="Alexander Antonov Ivanov" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAUDBA0ODQ4QDQ8MDw0NDQwODgwODQ0PDA0MDA0MDQ0NDQ4NDRAMDQ0ODQwMDRUNDhERExMTDQwWGBYSGBASFBIBBQUFCAcIDwkJDxQVEBQUFBUUFBUUFBQUFBcUFhQXFBQUFBQUFBQVFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIAKYAjAMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAACAQMEBwAFBgj/xAA7EAABAwIDBQYDBQgDAQAAAAABAAIRAyEEEjEFBkFRYQcTInGBkTKhsRQjQlLBCDNicpLR4fAWY7IX/8QAGwEAAQUBAQAAAAAAAAAAAAAAAQACAwUGBAf/xAAvEQACAQMCBAQFBAMAAAAAAAAAAQIDBBEhMQUSQVETImFxMoGR0eEGobHwFCPB/9oADAMBAAIRAxEAPwDchiIMTrWog1TmZGw1OBqNrU40ICGsiOmxHlTrWpBGw1KGp3KlDUBDJasyJ4tWZUBEctSBikZFmRIRGLULmKU5iBzURERzE25qmOYmnMSERXMQFilliHIkIca1GGpQEQCcAQNRtalARtagIxrUYWALR78bzUsFQNWrMAgNaPie8zDRNuGvAIN4Ck28I2+OxbKbS6o4Na0SXOMAAKmN5+3im0PbhqTi4SG1KhAb/NlEnqASFWe++8mK2lVL8jwwWZTa5xYxot0BcdSY15KLs7s+xT4OR1+n+g+S5p14rdlzbcKlJZkmT/8A69tKf37tSfhpxHKMq2+wO3DGsLO9yVWNzZpEPeDoC4WEcCAoezezl5gOabO1/hcLWNwQbLVbzblVqZ8LbcBFyBq4ngPP0UcbmDeEzvnwrCy4li7K/aBmqO9oBtEm5Y/NUaOd4a6/CyuXdjeGhi6feUHte3QxZzT+V7T4mnofSV4qxmDyGJBPkY9Oa6Xs132q4GuKjQHMMNqUzIzs6H8zdWk6X5rojIrbiwWPJv2PYpam3BQt2dt0sVRZWomWPFuBB4tI4OabEKc5SZKlrA2WoHNTsJISEMlqDKpBCAhIQgCIBYAiATgCtCcASNCMBIAi8+dsOM+17RGHDvusO0Aj8PekZqnmYyt9Ff8AtDFCmx73fDTY558mAuP0Xl7s8a6tXq1n3dUqOcfNzi4/Mrku6nJBst+DW/i1teha26+wmMa0NaAAu3wWDgKJuzhLCeS7TDYQQNFl23JnoEUoo0bcC38o9lGxWABkZR7LsRgBHBR34GZQxId5WVVtvdLDvBmmz+kT/lU/v/uQ2kS+mIj8I09uC9MbXwMKt97cOLzoQRC6Le4nCW5y3NCE47Gg/Za2vP2miXAAZKrWE3BMtqFo5fBPIwruK8rdnVTuNr0IdAdWydCyoC0t9Z94XqoBaaEsrJ5/fUuSqxISQjIWQnnENEJolPuCYeEhDgCIJAiCeNFCMIEQKAjke2THd3s/EEammW+hgH3VKdlDctLMdCVZX7RtU/YiGmJPiubtBHhjje/oqy3P2a6rTo0w802mnme8fFExA5TzVbfPmjy+v5NRwKDgufG+31wXlu1iswEEe4XV0KtQRZUb/wAfw9Ifd4ivmGhMBubo4ubfhZdVuVt7EUnAVqmZhkBzuJ6HThoCqd28cZTNVGtJfFEtZmKfEJtteoNAnMBtIOa0lgg6lvBcdvrvnVphwogZwYDbSRz8vLkUxUsvcc6qXQ3O1K7yLhVzvhXDpjVQm7ybRqjx1KVIc3tN/ZoHzWj3k+1U4NXu6lMkRVp2Ikx4m8R1Cd/jNPRojlX01TKk2ziD9pLmyHNeCDxDmkEEeoXs7APJYwu+IsaTyzFoJ+ZK8cbSoTjS0C73tAHMuj9V7D2P+7Z/Iz/yFoqDXKl6IxHFovnz6slwsKVIV0FONvUdykPKi1EAoeCIIQiCcNFCIIQlCQTgu3KiXYOpDc0MefINEk/ouU7MtlZqNP8AMKYjlcTdWLvyC5gpgx3wqUiYmz23txjX0XGdmDH0x3b/AI6csd1LCQCOjhB9VS3+ctez/Y2fA8eFF+6/fJHxO5/e030qjT3hqioMT4XaTDSx2jL/AANIEiTK63/j1Gjg6dINH3bTmffPUJJdLgPCIJOXiBaV1NJgtC0m+tchg5uMAcyeC4HXbjys0XgqL5ktSZuaT9mBk6GJ4CTHyWo3ZoU3Oc6o3Oc/jBcQ5zQT4QQCQ3mBE+S6TYux30qDcxkuEkcBIlcrgGlmILTabjyP9iok8PI+UUctW3Op08XVqveXUD3ppUmNqNqB1T4QSCGt7ubEG8Ac0VTYdT7ND+dpsSJlsgWB5xZWq6gHG4b5wuc32rBrCApZ1nNog8GMIsozZGyWv2mC+crMr7ayAD87r0xs8eBsaQI8uHyVA7hU6hrYjFCO6AdRbMeJxAEt8ojN1hX7s2llYwcmtHsFd2uXJ+iSMdxlpQgurcn/ABglICUpQLtM+DUKYKdeUyUByHgllACllOGhApZQEpQUBHN9pT3twr6lP46JFRvXLqDF4IJC4DcTer7W91TIKZENLQZuAPFMDWfkrgrsBBBAIIuDoRxVX7Y2LRwtcdywMbUBcQJguB1ubWOgXBfUU4OXUveC3bhPwujefngsTYdUugJvfbDnwFmXwB0yJhxiDEgnSLG0rVbvY05JHX0UJ+8VEnxFxIPIgfOLKgjHXJtlJywkb/Z2+Nc0IdRL3ZNWQWSP4nFpbGlx7qJskVKlam57WgNkucCYhzSMtwJOmlkWE25hwIkCOEhQa+3qDT8RbHEXHyUktSR0qsd1odDtatl00Vfb/bQ+7cSeB+S6CvtHOwkGRz0+SrbtE2hFBx6EDqTYfVKhDzpepy3VXyP2Juw98MLiBQw2GY9s9254c0AU+5hxAM+LO4a9SVdtN1l5z7HsfQFYuqAB5blDtInjHObFeiKTrLRW9OMFhdzDcUqzqVE5dsIdJQuKSULiugqwXFAkJQEoBQ6CllA0pZThBSlBQSllAQRVb9trzTbQqAEhtTK6NYfafQwrGlcz2l4UPw9/wvpuHmHCFHVxyPPY6bRtVoY7o5Tdrbbe7MuEayTaFD2jtqmw95TDagmSybhx/KdOsHRcb2r4JtA0ixxaKxc51IGGyLFwj4Zm40m/ErjK+OJZANjPG/P2VLTtudKaNyryVGTS3RbVLtQwYN8OC4A/iET6Hon8FtxmIJI7uky0wRMcBawVKUsILc7352uI+am4DEZD4XGCL9PRdFS1WPKPXGa8tJvQv7amNb3fhgtIEFUz2hbYzvbSGmYF58vhHvcrabk18RXa6k0wxrpdUN8gMyGji4xbgNVze+FFrKr8o8LYY295a2ZPMkknqoraioVMPoctzVc6fN3JWHwppDONHNa4X0kX06/7ZXd2L70GvSNN5mpSiJ1LDYerSInyVP8AZgO/ik7i2qwTeDl7xh9w4eq3nZXVNHaVNnB4qMcP5Qfe4Cs46PJm7nE4uPVanocOQPckCElTlQCSsASIpRCCClBTQctDtrfPCUJFSszMPwN8b/Zsx6kISkluS0qFSrLlpxbfZJs6SVhKqHb/AGvzIw1K/CpV+oY39Sq/2xvVi68irWqEHVgOVnllbAjouad1Fbamjsv0nd1lmpiC9dX9F/1ovDbnaNg6Jy5zUcNRSGYSOBcSGj3K4envRisTUio4NoudLaLWj4QZaXOjMTodbqt6IsfRWPuLhgQ1w/KPcWVdcXU5LBpn+naFjBTist7uWHj20099/U5btuxLDUYBOZjcpHC91XuGqwQLX1+ftC9D757nU8Uwugd6GgA+V4/yqW2luDi2GzMw1gajpCltK0OTlZU3VCbnzI0j8W2PkOmt+aGnivD520H+8FsxudiZA7p2ZxMtjSOZ0C7LdPsycXNNawBBycxy6XU869OK3OeFvUk9jZdluzX0cO97herBvrYfrKr7euoXVXg6F7zPy94+qvTa9EMp5RoAqo27hQDPEk3+ir6Ff/Y5PqXEbHxkqUd+n5HewyiTXiNCHz0DXtj1zLqtxMCX7YfUg5KZqkHh+WfUrmdw9tswzcQXT3jqThSMSM/BpPDhHBd3+zzhj3VSo+cxflvwGp+atoSUsYMrxC1q27m6kWs4S7PvhltkpslY5yAFdBRDgSoQlJRAeY9vb4YytapVdlP4GeBnlDYn1laJhSsuIS0wqWUm9z3GhaU6KxTikvRYDpog1CnQ1RndCI5RK7Psz221j+6qEBrz4HHQO5HoefPzXE6Jw8wmyWR1ahGtTcJf31PRmFsVlWm0u+vmFVW6faBUpAMrN71gsDMVAOUmzh5+67KnvfhajszaxZLWjuqjMoBBPiDgDci2sWCi5MGWuOG16b+HK7rX8nTOYyJ+qjSLkcOP9lqm7cw34q9GP5x9Bdazb+/WFaIpF1Q/wjK3+p0W8gmuJDTtK035YP6EraTxDnvIDGi5OiqTbWM7x5I+EWaOn9zqpu8G36tezoawGRTb8M8z+Y9StJWPv9FJThg0Vjw/wFzz+L+PyQ3mCtlsjbNbDnNQqOZOoBsfNp8LvULXPaiptU6ljVD528aqcJpNPvqWhu72vOEDE0w7/spWPqwmPYjyVj7u7y4fEj7mo1x4s0qDzYb+0heY6tO0jhqgo1yCC0kOGhBIIPQi4XVTuZLfUyd/+lbapnw/JLpjWL+X2Z64zIe8VGbmdqlWlDMVNWnoKlu9b58Hjzv1Vt7L21RrMD6dRjmnjmAIPIgwQRyK7oVYz2MRf8Jr2ksTWnRrVP7fM8ztalCNiQhUp7by6CNEqRTCEMgJWIMlhHA4QkaUpKEJpKxxK4dU3KJpCQghT6pYTYISuckFYFc+E0BxWBE5EY9Rp4QN1TzgmiESJrXJgFyOd1DexTn6g+iZqNuimRVqeSK5iCSFNyJp9NSKRx1LXJIKdYFixRssobivKxYsQ6EoQWELFiARGrC1KsQGoQoYWLEQBhIkWJBMcUDisWIjJGVDZNVNR5/W6xYihtT7DjVHrG6VYiiOp8J//9k="/>
 	<div id="contacts-info" class="information-set"><div class="inner">
 		<dl>
-			<dt>Name</dt>		<dd>Alexander Antonov Ivanov</dd>
-			<dt>Address</dt>	<dd>Bulgaria, Sofia</dd>
-			<dt>Phone</dt>		<dd>+359 888 492665</dd>
-			<dt>Email</dt>		<dd><a href="mailto:a.ivanov@avalith.bg">a.ivanov@avalith.bg</a></dd>
-			<dt>Birth Date</dt>	<dd>26th August 1987</dd>
+			<dt>key</dt><dd>value</dd>
 		</dl>
 
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-		<p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+		<p>bio</p>
+		
 		<div class="cleaner"></div>
 	</div></div>
 	
 	<div id="education" class="information-set"><div class="inner">
-		<div class="icon"><img src="edu.png" alt="" /></div>
-		
 		<h2>Education</h2>
 		
 		<h3>New Bulgarian University <span>(University)</span> <strong>Computer Science, Bachelor</strong></h3>
 		<p><strong>From:</strong> October 2009 <strong>To:</strong> July 2013</p>
-		
-		<h3>PGTE &quot;Henry Ford&quot; <span>(High School)</span> <strong>Automobiles</strong></h3>
-		<p><strong>From:</strong> September 2001 <strong>To:</strong> July 2006</p>
-	</div></div>	
+	</div></div>
 	
 	<div id="events" class="information-set"><div class="inner">
-		<div class="icon"><img src="suitcase.png" alt="" /></div>
 		<h2>Events</h2>
 		
 		<h3>Google IO 2011 Developer Conference <!-- img src="google-io-2011.png" alt="Google I/O Developer Conference 2011" title="Google I/O Developer Conference 2011" /--></h3>
@@ -56,759 +46,65 @@
 		<div class="icon"><img src="idea.png" alt="" /></div>
 		
 		<h2>Skills</h2>
-		
-		<div class="spacer"></div>
 
 		<h4 class="skills-category">Languages</h4>
 		<dl>
 			<dt>English</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>1996</strong></dd>
-			<dt>Japanese</dt>			<dd><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2007</strong></dd>
 		</dl>
-		
-		<h4 class="skills-category">Markup Languages</h4>
-		<dl>
-			<dt>XML</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2001</strong></dd>
-			<dt>HTML</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>1998</strong></dd>
-			<dt>xHTML</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2003</strong></dd>
-			<dt>HTML 5</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2011</strong></dd>
-			<dt>CSS</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2002</strong></dd>
-			<dt>CSS 3</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2011</strong></dd>
-		</dl>
-		
-		<h4 class="skills-category">Programming Languages</h4>
-		<dl>
-			<dt>JavaScript</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2003</strong></dd>
-			<dt>PHP</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>1999</strong></dd>
-			<dt>Python</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2008</strong></dd>
-			<dt>Ruby</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2009</strong></dd>
-			<dt>ActionScript2</dt>		<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2002</strong></dd>
-			<dt>Java</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2009</strong></dd>
-			<dt>C#</dt>					<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2010</strong></dd>
-			<dt>C/C++</dt>				<dd><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2007</strong></dd>
-			<dt>Haskell</dt>			<dd><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2012</strong></dd>
-			<dt>Prolog</dt>				<dd><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2010</strong></dd>
-			<dt>Erlang</dt>				<dd><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2013</strong></dd>
-		</dl>
-		
-		<h4 class="skills-category">PHP Frameworks</h4>
-		<dl>
-			<dt>Fwurks</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>				<dd>Experience Since: <strong>2007</strong></dd>
-			<dt>CodeIgniter</dt>	<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>			<dd>Experience Since: <strong>2007</strong></dd>
-			<dt>CakePHP</dt>		<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2009</strong></dd>
-			<dt>Symphony</dt>		<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2010</strong></dd>
-			<dt>Yii Framework</dt>	<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2011</strong></dd>
-		</dl>
-		
-		<h4 class="skills-category">Python Frameworks</h4>
-		<dl>
-			<dt>Django</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span></dd>			<dd>Experience Since: <strong>2009</strong></dd>
-		</dl>
-		
-		<h4 class="skills-category">Ruby Frameworks</h4>
-		<dl>
-			<dt>Ruby on Rails</dt>		<dd><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>			<dd>Experience Since: <strong>2010</strong></dd>
-		</dl>
-		
-		<h4 class="skills-category">JavaScript Libraries</h4>
-		<dl>
-			<dt>JQuery</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2006</strong></dd>
-			<dt>JQuery UI</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2008</strong></dd>
-			<dt>Prototype</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2005</strong></dd>
-			<dt>MooTools</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2006</strong></dd>
-			<dt>Dojo</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2007</strong></dd>
-			<dt>ExtJS</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2008</strong></dd>
-		</dl>
-		
-		<h4 class="skills-category">Storage Solutions</h4>
-		<dl>
-			<dt>MySQL</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2000</strong></dd>
-			<dt>MariaDB</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2010</strong></dd>
-			<dt>Google BigTable</dt>	<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2010</strong></dd>
-			<dt>Google BlobStore</dt>	<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2010</strong></dd>
-			<dt>PostgreSQL</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2007</strong></dd>
-			<dt>Amazon S3</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2007</strong></dd>
-			<dt>MongoDB</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2011</strong></dd>
-			<dt>CouchDB</dt>			<dd><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2011</strong></dd>
-		</dl>
-		
-		<h4 class="skills-category">Platforms</h4>
-		<dl>
-			<dt>Google App Engine</dt>	<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2009</strong></dd>
-			<dt>Amazon Web Services</dt><dd><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span><span class="lvl n"></span></dd>	<dd>Experience Since: <strong>2011</strong></dd>
-		</dl>
-			
 		
 		<h4 class="skills-category">Services Integration</h4>
 		<ul>
 			<li>Flickr API</li>
-			<li>Amazon S3</li>
-			<li>PayPal</li>
-			<li>ePay</li>
-			<li>Facebook</li>
-			<li>OpenID</li>
-			<li>SAML</li>
 		</ul>
-			
-		<h4 class="skills-category">Version Control</h4>
-		<dl>
-			<dt>SVN</dt>		<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2008</strong></dd>
-			<dt>Git</dt>		<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2011</strong></dd>
-		</dl>
 		
-		<h4 class="skills-category">Design</h4>
-		<dl>
-			<dt>Adobe Photoshop</dt>	<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2003</strong></dd>
-			<dt>Adobe Flash</dt>		<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2002</strong></dd>
-		</dl>
-		
-		<h4 class="skills-category">Operation Systems</h4>
-		<dl>
-			<dt>Windows</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>1995</strong></dd>
-			<dt>Linux - Gentoo</dt>		<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span></dd>			<dd>Experience Since: <strong>2007</strong></dd>
-			<dt>Linux - Ubuntu</dt>		<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2008</strong></dd>
-			<dt>Linux - Debian</dt>		<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2004</strong></dd>
-			<dt>MacOS</dt>				<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>2009</strong></dd>
-		</dl>
 		<div class="cleaner"></div>
 	</div></div>
 	
-	<div class="tabs">
-		<ul>
-			<li class="selected"><a href="#freelance">Freelance</a></li>
-			<li><a href="#avalith">Avalith</a></li>
-			<li><a href="#antipodes">Antipodes</a></li>
-			<li><a href="#magstudio">Mag Studio</a></li>
-			<li><a href="#epsilon">Epsilon Interactive</a></li>
-		</ul>
-	</div>
-
-	<div class="tab-containers">
-		<div id="freelance" class="information-set tab-cnt selected"><div class="inner">
-			<div class="icon"><img src="blocks.png" alt="" /></div>
-			
-			<h2>Freelance &amp; Personal Projects</h2>
-			
-			<div class="spacer"></div>
-
-			<h4>Year 2012</h4>
-			<dl class="projects">
-				<dt>Fwurks v4 <a href="https://github.com/Avalith/Fwurks" target="_blank">https://github.com/Avalith/Fwurks</a></dt>
-				<dd><p>PHP 5.4 Hierarchical-Model-View-Controller (HMVC) based framework with Object Relational Mapping (ORM), Active Record and Smarty template engine, multilingual support</p></dd>
-			</dl>
-
-			<h4>Year 2011</h4>
-			<dl class="projects">
-				<dt>Architectural Studio Tectonis <a href="http://www.tectonis.com/" target="_blank">http://www.tectonis.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-					</ul>
-				</dd>
-			</dl>
-			
-			<h4>Year 2010</h4>
-			<dl class="projects">
-				<dt>Fwurks v3 <a href="https://github.com/Avalith/Fwurks" target="_blank">https://github.com/Avalith/Fwurks</a></dt>
-				<dd><p>PHP 5.3 Hierarchical-Model-View-Controller (HMVC) based framework with Object Relational Mapping (ORM), Active Record and Smarty template engine, multilingual support</p></dd>
-				
-				<dt>M-Innovation <a href="http://www.m-innovation.eu/" target="_blank">http://www.m-innovation.eu/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>Project Management</li>
-						<li>Design</li>
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>CSS/XHTML Development</li>
-					</ul>
-				</dd>
-			</dl>
-			
-			<h4>Year 2009</h4>
-			<dl class="projects">
-				<dt>Fwurks v2 <a href="https://github.com/Avalith/Fwurks" target="_blank">https://github.com/Avalith/Fwurks</a></dt>
-				<dd><p>PHP 5.3 Model-View-Controller (MVC) based framework with Object Relational Mapping (ORM), Active Record and Smarty template engine, multilingual support</p></dd>
-			</dl>
-			
-			<h4>Year 2008</h4>
-			<dl class="projects">
-				<dt>Fwurks <a href="https://github.com/Avalith/Fwurks" target="_blank">https://github.com/Avalith/Fwurks</a></dt>
-				<dd><p>PHP 5 Model-View-Controller (MVC) based framework with Object Relational Mapping (ORM), Active Record and Smarty template engine, multilingual support</p></dd>
-			</dl>
-			
-			<h4>Year 2007</h4>
-			<dl class="projects">
-				<dt>Assistance Bulgaria <a href="http://www.assistancebulgaria.com/" target="_blank">http://www.assistancebulgaria.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration)</li>
-					</ul>
-				</dd>
-				
-				<dt>B&amp;N Consult <a href="http://www.bnconsult.biz/" target="_blank">http://www.bnconsult.biz/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration)</li>
-					</ul>
-				</dd>
-			</dl>
-			
-			<h4>Year 2004</h4>
-			<dl class="projects">
-				<dt>Yomi Engineering Ltd <a href="http://www.yomibg.com/" target="_blank">http://www.yomibg.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>Flash Development</li>
-					</ul>
-				</dd>
-			</dl>
-		</div></div>
+	<div id="freelance" class="information-set selected"><div class="inner">
+		<h2>Freelance &amp; Personal Projects</h2>
+		<div class="spacer"></div>
 		
-		<div id="avalith" class="information-set tab-cnt"><div class="inner">
-			<div class="icon"><img src="blocks.png" alt="" /></div>
-			
-			<h2>Avalith <a href="http://www.avalith.bg/" target="_blank">http://www.avalith.bg/</a></h2>
-			
-			<div class="spacer"></div>
-
-			<p><strong>Position:</strong> Founder & CEO</p>
-			<p><strong>From:</strong> December 2011</p>
-			<p><strong>Responsibilities:</strong> 
-				<ul class="responsibilities">
-					<li>Manage company</li>
-					<li>Manage web department & projects</li>
-					<li>Lead, guide and train a team of developers</li>
-					<li>Develop PHP Model-View-Controller (MVC) based framework with Object Relational Mapping (ORM) with many adapters to SQL (MySQL, MariaDB, PostgreSQL, VoltDB) and NoSQL (MongoDB, CouchDB) database management systems (DBMS), Active Record and Smarty template engine, multilingual support</li>
-					<li>Engineer and develop PHP/MySQL(MariaDB) web based sites and systems using framework</li>
-					<li>Support and performance optimization</li>
-					<li>Implement Javascript, AJAX and Google Maps functionality</li>
-					<li>Engineer and develop Google App Engine/Python Sites using Django MVC framework</li>
-					<li>xHTML/CSS coding</li>
+		<h4>Year 2011</h4>
+		<dl class="projects">
+			<dt>Architectural Studio Tectonis <a href="http://www.tectonis.com/" target="_blank">http://www.tectonis.com/</a></dt>
+			<dd>
+				<p>TO BE DESCRIBED</p>
+				<ul class="project-work">
+					<li>System Architecture</li>
 				</ul>
-			</p>
-			<hr />
-			
-			<h4>Projects</h4>
-			<dl class="projects">
-				<dt>Drop The C-Bomb <a href="http://www.dropthecbomb.com/" target="_blank">http://www.dropthecbomb.com/</a></dt>
-				<dd>
-					<p>asdasd</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>TBA</li>
-					</ul>
-				</dd>
-				
-				<dt>Histroypin American Experience <a href="http://historypin.americanexperience.org/" target="_blank">http://historypin.americanexperience.org/</a></dt>
-				<dd>
-					<p>Historypin is a way for millions of people to come together, from across different generations, cultures and places, to share small glimpses of the past and to build up the huge story of human history.</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>Google App Engine/Python (using Django MVC framework) Development</li>
-						<li>Javascript Development (+Event Driven Client Side)</li>
-						<li>Ajax Functionality</li>
-						<li>Google Maps Functionality</li>
-						<li>Performance Optimizations</li>
-					</ul>
-				</dd>
-
-				<dt>ActionTracker - Arcellor Mittal<a href="http://www.action4all-arcelormittal.com/" target="_blank">http://www.action4all-arcelormittal.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-						<li>Facebook Connect Integration</li>
-						<li>Performance Optimizations</li>
-					</ul>
-				</dd>
-
-				<dt>ActionTracker - Sky<a href="http://smallactions.co.uk/" target="_blank">http://smallactions.co.uk/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-						<li>Performance Optimizations</li>
-					</ul>
-				</dd>
-
-				<dt>Project melt <a href="http://www.histroypin.com/" target="_blank">http://www.histroypin.com/</a></dt>
-				<dd>
-					<p>asdasd</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>Google App Engine/Python (using Django MVC framework) Development</li>
-						<li>Javascript Development (+Event Driven Client Side)</li>
-						<li>Ajax Functionality</li>
-						<li>Google Maps Functionality</li>
-						<li>Performance Optimizations</li>
-					</ul>
-				</dd>
-				
-				<dt>
-					Histroypin <a href="http://www.histroypin.com/" target="_blank">http://www.histroypin.com/</a>
-					
-					<ul class="awards">
-						<li><a href="http://www.webbyawards.com/webbys/current.php?season=15#webby_entry_charitable_organizations_non-profit">Webby (2011)</a></li>
-						<li><a href="http://webawards.bg/bg/winners">WebAward (2011)</a></li>
-						<li><a href="http://www.lovieawards.eu/winners/?q=historypin">Lovie (2011)</a></li>
-					</ul>
-				</dt>
-				<dd>
-					<p>Historypin is a way for millions of people to come together, from across different generations, cultures and places, to share small glimpses of the past and to build up the huge story of human history.</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>Google App Engine/Python (using Django MVC framework) Development</li>
-						<li>Javascript Development (+Event Driven Client Side)</li>
-						<li>Ajax Functionality</li>
-						<li>Google Maps Functionality</li>
-						<li>Performance Optimizations</li>
-					</ul>
-				</dd>
-				
-				<dt>
-					Internet Buttons <a href="http://www.internetbuttons.org/" target="_blank">http://www.internetbuttons.org/</a>
-					Internet Buttons NL<a href="http://www.internetbuttonsnl.nl/" target="_blank">http://www.internetbuttons.nl/</a>
-					Internet Buttons PL<a href="http://www.internetstarter.com.pl/" target="_blank">http://www.internetstarter.com.pl/</a>
-					
-					<ul class="awards">
-						<li><a href="http://www.technology4goodawards.org.uk/uncategorized/and-winners-are/">Technology4Good (2011)</a></li>
-					</ul>
-				</dt>
-				<dd>
-					<p>It's the perfect thing for anyone new to the net or is just a bit web-rubbish. So if you know any one flummoxed by tweets, links and pokes or who'd appreciate learning how to email, Skype, or shop online, why not set them up with a page of Internet Buttons today?</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-					</ul>
-				</dd>
-				
-				<dt>ActionTracker<a href="http://www.actiontracker.org.uk/" target="_blank">http://www.actiontracker.org.uk/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-						<li>Facebook Connect Integration</li>
-						<li>Performance Optimizations</li>
-					</ul>
-				</dd>
-			</dl>
-		</div></div>
+			</dd>
+		</dl>
+	</div></div>
+	
+	<div id="avalith" class="information-set"><div class="inner">
+		<h2>Avalith <a href="http://www.avalith.bg/" target="_blank">http://www.avalith.bg/</a></h2>
 		
-		<div id="antipodes" class="information-set tab-cnt"><div class="inner">
-			<div class="icon"><img src="blocks.png" alt="" /></div>
-			
-			<h2>Antipodes <a href="http://www.antipodes.bg/" target="_blank">http://www.antipodes.bg/</a></h2>
-			
-			<div class="spacer"></div>
-
-			<p><strong>Position:</strong> Head of Web Department</p>
-			<p><strong>From:</strong> October 2010</strong> To:</strong> December 2011</p>
-			<p><strong>Responsibilities:</strong> 
-				<ul class="responsibilities">
-					<li>Manage web department & projects</li>
-					<li>Lead, guide and train a team of developers</li>
-					<li>Develop PHP Model-View-Controller (MVC) based framework with Object Relational Mapping (ORM), Active Record and Smarty template engine, multilingual support</li>
-					<li>Engineer and develop PHP/MySQL(MariaDB) web based sites and systems using framework</li>
-					<li>Support and performance optimization</li>
-					<li>Implement Javascript, AJAX and Google Maps functionality</li>
-					<li>Engineer and develop Google App Engine/Python Sites using Django MVC framework</li>
-					<li>xHTML/CSS coding</li>
-				</ul>
-			</p>
-			<hr />
-			
-			<p><strong>Position:</strong>Senior and Team Leader Developer</p>
-			<p><strong>From:</strong> March 2008 <strong>To:</strong> October 2010</p>
-			<p><strong>Responsibilities:</strong> 
-				<ul class="responsibilities">
-					<li>Lead, guide and train a team of developers</li>
-					<li>Develop PHP Model-View-Controller (MVC) based framework with Object Relational Mapping (ORM), Active Record and Smarty template engine, multilingual support</li>
-					<li>Engineer and develop PHP/MySQL(MariaDB) web based sites and systems using framework</li>
-					<li>Support and performance optimization</li>
-					<li>Implement Javascript, AJAX and Google Maps functionality</li>
-					<li>Engineer and develop Google App Engine/Python Sites using Django MVC framework</li>
-					<li>xHTML/CSS coding</li>
-				</ul>
-			</p>
-			<hr />
-			
-			<h4>Projects</h4>
-			<dl class="projects">
-				<dt>DIY Storytime <a href="http://www.diystorytime.com/" target="_blank">http://www.diystorytime.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-					</ul>
-				</dd>
-				
-				<dt>Antipodes <a href="http://www.antipodes.bg/" target="_blank">http://www.antipodes.bg/</a></dt>
-				<dd>
-					<p>Corporate Site</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-					</ul>
-				</dd>
-				
-				<dt>Virtual Clinic <a href="http://www.zdrave.com/" target="_blank">http://www.zdrave.com/</a></dt>
-				<dd>
-					<p>Site for online live health consultations</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-						<li>SOAP Service communicating with <acronym title="Business Process Management">BPM</acronym> System</li>
-					</ul>
-				</dd>
-				
-				<dt>FreeBet <a href="http://www.freebet.bg/" target="_blank">http://www.freebet.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-						<li>Facebook Connect Integration</li>
-						<li>Performance Optimizations</li>
-					</ul>
-				</dd>
-				
-				<dt>AMR Foods <a href="http://www.amrfoods.com/" target="_blank">http://www.amrfoods.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-					</ul>
-				</dd>
-				
-				<dt>AMR Wines <a href="http://www.amrwines.com/" target="_blank">http://www.amrwines.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-					</ul>
-				</dd>
-				
-				<dt>We Are What We Do <a href="http://www.wearewhatwedo.org/" target="_blank">http://www.wearewhatwedo.org/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-						<li>Facebook Connect Integration</li>
-						<li>Performance Optimizations</li>
-					</ul>
-				</dd>
-				
-				<dt>Junction 49 <a href="http://www.junction49.co.uk/" target="_blank">http://www.junction49.co.uk/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Flickr Integration</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-					</ul>
-				</dd>
-				
-				<dt>
-					Buyer4 Network - Cars	<a href="http://www.buyers4cars.co.uk/" target="_blank">http://www.buyers4cars.co.uk/</a>
-					Buyer4 Network - Bikes	<a href="http://www.buyers4bikes.co.uk/" target="_blank">http://www.buyers4bikes.co.uk/</a>
-					Buyer4 Network - Vans	<a href="http://www.buyers4vans.co.uk/" target="_blank">http://www.buyers4vans.co.uk/</a>
-					Buyer4 Network - Trucks <a href="http://www.buyers4trucks.co.uk/" target="_blank">http://www.buyers4trucks.co.uk/</a>
-					Buyer4 Network - Homes	<a href="http://www.buyers4homes.co.uk/" target="_blank">http://www.buyers4homes.co.uk/</a>
-				</dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-					</ul>
-				</dd>
-				
-				<dt>Woollen Salmon <a href="http://www.woollensalmon.co.uk/" target="_blank">http://www.woollensalmon.co.uk/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>System Architecture</li>
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>Ajax Functionality</li>
-					</ul>
-				</dd>
-				
-				<dt>Econ.BG <a href="http://www.econ.bg/" target="_blank">http://www.econ.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Support</li>
-						<li>CSS/XHTML Support</li>
-						<li>Performance Optimization</li>
-					</ul>
-				</dd>
-				
-				<dt>Agro.BG <a href="http://www.agro.bg/" target="_blank">http://www.agro.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Support</li>
-						<li>CSS/XHTML Support</li>
-						<li>Performance Optimization</li>
-					</ul>
-				</dd>
-			</dl>
-		</div></div>
-			
-		<div id="magstudio" class="information-set tab-cnt"><div class="inner">
-			<div class="icon"><img src="blocks.png" alt="" /></div>
-			
-			<h2>Mag Studio <a href="http://www.magstudio.bg/" target="_blank">http://www.magstudio.bg/</a></h2>
-			
-			<div class="spacer"></div>
-
-			<p><strong>Position:</strong> Developer</p>
-			<p><strong>From:</strong> April 2007 <strong>To:</strong> March 2008</p>
-			<p><strong>Responsibilities:</strong> 
-				<ul class="responsibilities">
-					<li>PHP/MySQL(and PostgreSQL) web based sites and systems development and support</li>
-					<li>Implement Javascript, AJAX functionality</li>
-					<li>xHTML/CSS coding</li>
-				</ul>
-			</p>
-			<hr />
-			
-			<h4>Projects</h4>
-			<dl class="projects">
-				<dt>Neterra <a href="http://www.neterra.net/" target="_blank">http://www.neterra.net/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>Database Design/li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>CSS/XHTML Development</li>
-						<li>Design Fixes</li>
-					</ul>
-				</dd>
-				
-				<dt>Megatron Leasing <a href="http://www.megatronlease.com/" target="_blank">http://www.megatronlease.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration, using MVC framework)</li>
-						<li>Javascript Development</li>
-						<li>CSS/XHTML Development</li>
-					</ul>
-				</dd>
-				
-				<dt>Ecopack - Kids <a href="http://www.ecopack.bg/kids/" target="_blank">http://www.ecopack.bg/kids/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>Database Design</li>
-						<li>PHP/MySQL Development (Client Side and Administration)</li>
-						<li>Javascript Development</li>
-						<li>CSS/XHTML Development</li>
-						<li>Design Fixes</li>
-					</ul>
-				</dd>
-				
-				<dt>Nutrition Grove <a href="http://www.nutritiongrove.com/" target="_blank">http://www.nutritiongrove.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Development (Client Side and Administration)</li>
-						<li>Javascript Development</li>
-						<li>CSS/XHTML Development</li>
-					</ul>
-				</dd>
-				
-				<dt>Bulgarian National Audit Office <a href="http://www.bulnao.government.bg/" target="_blank">http://www.bulnao.government.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Development (Client Side and Administration)</li>
-						<li>Javascript Development</li>
-					</ul>
-				</dd>
-				
-				<dt>Communications Regulation Commission <a href="http://www.crc.bg/" target="_blank">http://www.crc.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Development (Client Side and Administration)</li>
-						<li>Javascript Development</li>
-					</ul>
-				</dd>
-				
-				<dt>Industrial Holding Bulgaria <a href="http://www.crc.bg/" target="_blank">http://www.crc.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Development (Client Side and Administration)</li>
-						<li>Javascript Development</li>
-					</ul>
-				</dd>
-				
-				<dt>Game Club Cafe <a href="http://www.gameclubcafe.com/" target="_blank">http://www.gameclubcafe.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Development (Client Side and Administration)</li>
-						<li>Javascript Development</li>
-						<li>CSS/XHTML Support</li>
-					</ul>
-				</dd>
-				
-				<dt>Royal Yacht <a href="http://www.royalyacht.bg/" target="_blank">http://www.royalyacht.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Development (Client Side and Administration)</li>
-						<li>Javascript Development</li>
-					</ul>
-				</dd>
-				<dd></dd>
-				
-				<dt>CocaCola PDA</dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<p>Corporate Infromation System for Pocket PC</p>
-					<ul class="project-work">
-						<li>PHP Support</li>
-					</ul>
-				</dd>
-				
-				<dt>"Manager" Megazine <a href="http://www.manager.bg/" target="_blank">http://www.manager.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Support</li>
-					</ul>
-				</dd>
-				
-				<dt>Karoll <a href="http://www.karoll.net/" target="_blank">http://www.karoll.net/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Support</li>
-						<li>Javascript Support</li>
-						<li>CSS/XHTML Support</li>
-					</ul>
-				</dd>
-				
-				<dt>Balkan Captial Management <a href="http://www.bacm.bg/" target="_blank">http://www.bacm.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Support</li>
-						<li>CSS/XHTML Support</li>
-					</ul>
-				</dd>
-				
-				<dt>Bulgarian American Credit Bank <a href="http://www.bacb.bg/" target="_blank">http://www.bacb.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Support</li>
-						<li>Javascript Support</li>
-						<li>CSS/XHTML Support</li>
-					</ul>
-				</dd>
-				
-				<dt>BT Collection - Paradise Beach <a href="http://www.paradisebeach.bg/" target="_blank">http://www.paradisebeach.bg/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL - Support</li>
-					</ul>
-				</dd>
-				
-				<dt>Balkan Tourist Development Services <a href="http://www.bt-ds.com/" target="_blank">http://www.bt-ds.com/</a></dt>
-				<dd>
-					<p>TO BE DESCRIBED</p>
-					<ul class="project-work">
-						<li>PHP/MySQL Support</li>
-					</ul>
-				</dd>
-			</dl>
-		</div></div>
+		<p><strong>Position:</strong> Founder & CEO</p>
+		<p><strong>From:</strong> December 2011</p>
+		<p><strong>Responsibilities:</strong> 
+			<ul class="responsibilities">
+				<li>Manage company</li>
+			</ul>
+		</p>
+		<hr />
 		
-		<div id="epsilon" class="information-set tab-cnt"><div class="inner">
-			<div class="icon"><img src="blocks.png" alt="" /></div>
-			
-			<h2>Epsilon Interactive <a href="http://www.epsilon.com/" target="_blank">http://www.epsilon.com/</a></h2>
-			
-			<div class="spacer"></div>
-
-			<p><strong>Position:</strong> Creative Coder</p>
-			<p><strong>From:</strong> July 2006 <strong>To:</strong> April 2007</p>
-			<p><strong>Responsibilities:</strong> 
-				<ul class="responsibilities">
-					<li>Code HTML Emails and Newsletters</li>
-					<li>Design HTML Emails and Newsletters</li>
+		<h4>Projects</h4>
+		<dl class="projects">
+			<dt>
+				Internet Buttons <a href="http://www.internetbuttons.org/" target="_blank">http://www.internetbuttons.org/</a>
+				
+				<ul class="awards">
+					<li><a href="http://www.technology4goodawards.org.uk/uncategorized/and-winners-are/">Technology4Good (2011)</a></li>
 				</ul>
-			</p>
-		</div></div>
-	</div>
+			</dt>
+			<dd>
+				<p>It's the perfect thing for anyone new to the net or is just a bit web-rubbish. So if you know any one flummoxed by tweets, links and pokes or who'd appreciate learning how to email, Skype, or shop online, why not set them up with a page of Internet Buttons today?</p>
+				<ul class="project-work">
+					<li>System Architecture</li>
+				</ul>
+			</dd>
+		</dl>
+	</div></div>
 </div>
 
 

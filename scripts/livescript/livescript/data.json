@@ -9,7 +9,8 @@ DATA = {
       Address: 'Bulgaria, Sofia',
       Phone: '+359 888 492665',
       Email: 'a.ivanov@avalith.bg',
-      'Date of birth': '26th August 1987'
+      'Date of birth': '26th August 1987',
+      wpm: 10000
     },
     bio: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede'
   },
@@ -114,41 +115,69 @@ DATA = {
       company: 'Avalith',
       url: 'http://www.avalith.bg/',
       positions: [{
-        position: 1,
+        position: 'Founder & CEO',
         date: {
-          from: 1,
-          to: 2
+          from: 'December 2011'
         },
-        tasks: ['Manage company', 'Manage web department & projects']
+        tasks: ['Manage company', 'Manage web department & projects', 'Lead, guide and train a team of developers', 'Incorporate the usage PHP MVC based framework with ORM, Active Record, Smarty template engine and multilingual support', 'Engineer and develop PHP/MySQL(MariaDB) web based sites and systems using MVC framework', 'Engineer and develop Google App Engine/Python Sites using Django MVC framework', 'Support and performance optimization of old and current projects', 'Implement Javascript, AJAX and Google Maps functionality', 'xHTML/CSS coding, responsive layouts', 'R&D on new technoligies']
       }],
-      projects: [{
-        title: 'Drop The C-Bomb',
-        url: 'http://',
-        description: 'asd',
-        tasks: ['System Architecture', 'Database Design'],
-        awards: [['Webby', 2011, 'http://'], ['WebAward', 2011, 'http://']]
-      }]
-    }, {
-      company: 'Avalith',
-      url: 'http://www.avalith.bg/',
-      positions: [{
-        position: 1,
-        date: {
-          from: 1,
-          to: 2
-        },
-        tasks: ['Manage company', 'Manage web department & projects']
-      }],
-      projects: [{
-        title: 'Drop The C-Bomb',
-        url: 'http://',
-        description: 'asd',
-        tasks: ['System Architecture', 'Database Design'],
-        awards: [['Webby', 2011, 'http://'], ['WebAward', 2011, 'http://']]
-      }]
+      projects: [
+        {
+          title: 'Histroypin - Europeana 1989',
+          url: 'http://www.europeana1989.eu/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Google App Engine/Python (using Django MVC framework) Development', 'Javascript Development (+Event Driven Client Side)', 'Ajax Functionality', 'Google Maps Functionality', 'Performance Optimizations', 'Single Sign On through the PBS login system']
+        }, {
+          title: 'Drop The C-Bomb',
+          url: 'http://www.dropthecbomb.com',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)']
+        }, {
+          title: 'Histroypin - American Experience ',
+          url: 'http://historypin.americanexperience.org/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Google App Engine/Python (using Django MVC framework) Development', 'Javascript Development (+Event Driven Client Side)', 'Ajax Functionality', 'Google Maps Functionality', 'Performance Optimizations', 'Single Sign On through the PBS login system']
+        }, {
+          title: 'ActionTracker - Arcellor Mittal',
+          url: 'http://www.action4all-arcelormittal.com/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality', 'Single Sign On through SAML Arcellor Mittal login system']
+        }, {
+          title: 'ActionTracker - Sky',
+          url: 'http://smallactions.co.uk/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality', 'Performance Optimizations']
+        }, {
+          title: 'Project Melt',
+          url: {
+            description: 'TO BE DESCRIBED'
+          },
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Ajax Functionality', 'Google Maps Functionality', 'Performance Optimizations']
+        }, {
+          title: 'Histroypin',
+          url: 'http://www.histroypin.com/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Google App Engine/Python (using Django MVC framework) Development', 'Javascript Development (+Event Driven Client Side)', 'Ajax Functionality', 'Google Maps Functionality', 'Performance Optimizations'],
+          awards: [['Webby', 2011, 'http://www.webbyawards.com/webbys/current.php?season=15#webby_entry_charitable_organizations_non-profit'], ['WebAward', 2011, 'http://webawards.bg/bg/winners'], ['Lovie', 2011, 'http://www.lovieawards.eu/winners/?q=historypin']]
+        }, {
+          title: 'Internet Buttons'['Internet Buttons NL']['Internet Buttons PL'],
+          url: 'http://www.internetbuttons.org/',
+          'http://www.internetbuttons.nl/': 'http://www.internetbuttons.nl/',
+          'http://www.internetstarter.com.pl/': 'http://www.internetstarter.com.pl/',
+          description: "It's the perfect thing for anyone new to the net or is just a bit web-rubbish. So if you know any one flummoxed by tweets, links and pokes or who'd appreciate learning how to email, Skype, or shop online, why not set them up with a page of Internet Buttons today?",
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality'],
+          awards: [['Technology4Good', 2011, 'http://www.technology4goodawards.org.uk/uncategorized/and-winners-are/']]
+        }, {
+          title: 'ActionTracker',
+          url: 'http://www.actiontracker.org.uk/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality']
+        }
+      ]
     }, {
       company: 'Antipodes',
       url: 'http://www.antipodes.bg/',
+      icon: 'blocks.png',
       positions: [
         {
           position: 'Head of Web Department',
@@ -166,15 +195,75 @@ DATA = {
           tasks: ['Lead, guide and train a team of developers', 'Incorporate the usage PHP MVC based framework with ORM, Active Record, Smarty template engine and multilingual support', 'Engineer and develop PHP/MySQL(MariaDB) web based sites and systems using MVC framework', 'Support and performance optimization of old and current projects', 'Implement Javascript, AJAX', 'xHTML/CSS coding']
         }
       ],
-      projects: [{
-        title: 'Drop The C-Bomb',
-        url: 'http://',
-        description: 'asd',
-        tasks: ['System Architecture', 'Database Design']
-      }]
+      projects: [
+        {
+          title: 'DIY Storytime',
+          url: 'http://www.diystorytime.com/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality']
+        }, {
+          title: '3D Spacer'
+        }, {
+          title: 'Antipodes',
+          url: 'http://www.antipodes.bg/',
+          description: 'Corporate Site',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality']
+        }, {
+          title: 'Virtual Clinic',
+          url: 'http://www.zdrave.com/',
+          description: 'Corporate Site',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality', 'SOAP Service communicating with BPM System']
+        }, {
+          title: 'FreeBet',
+          url: 'http://www.freebet.bg/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality', 'Facebook Connect Integration', 'Performance Optimizations']
+        }, {
+          title: 'AMR Foods',
+          url: 'http://www.amrfoods.com/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development']
+        }, {
+          title: 'AMR Wines',
+          url: 'http://www.amrwines.com/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development']
+        }, {
+          title: 'We Are What We Do',
+          url: 'http://www.wearewhatwedo.org/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality', 'Facebook Connect Integration', 'Performance Optimizations']
+        }, {
+          title: 'Junction 49',
+          url: 'http://www.junction49.co.uk/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality', 'Flickr Integration']
+        }, {
+          title: ['Buyer4 Network - Cars', 'Buyer4 Network - Bikes', 'Buyer4 Network - Vans', 'Buyer4 Network - Trucks', 'Buyer4 Network - Homes'],
+          url: ['http://www.buyers4cars.co.uk/', 'http://www.buyers4bikes.co.uk/', 'http://www.buyers4vans.co.uk/', 'http://www.buyers4trucks.co.uk/', 'http://www.buyers4homes.co.uk/'],
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development', 'Ajax Functionality']
+        }, {
+          title: 'Woollen Salmon',
+          url: 'http://www.woollensalmon.co.uk/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['System Architecture', 'Database Design', 'Client Side (PHP/MySQL using MVC framework)', 'Administration (PHP/MySQL using MVC framework)', 'Javascript Development']
+        }, {
+          title: 'Econ.BG',
+          url: 'http://www.econ.bg/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['PHP/MySQL Support', 'CSS/XHTML Support', 'Performance Optimization']
+        }, {
+          title: 'Agro.BG',
+          url: 'http://www.agro.bg/',
+          description: 'TO BE DESCRIBED',
+          tasks: ['PHP/MySQL Support', 'CSS/XHTML Support', 'Performance Optimization']
+        }
+      ]
     }, {
       company: 'Mag Studio',
       url: 'http://www.magstudio.bg/',
+      icon: 'blocks.png',
       positions: [{
         position: 'Developer',
         date: {
@@ -269,6 +358,7 @@ DATA = {
     }, {
       company: 'Epsilon Interactive International',
       url: 'http://www.epsilon.com/',
+      icon: 'blocks.png',
       positions: [{
         position: 'Creative Coder',
         date: {
