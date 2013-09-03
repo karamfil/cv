@@ -666,11 +666,4 @@ DATA =
 				'Code HTML Emails and Newsletters'
 				'Design HTML Emails and Newsletters'
 		]
-		projects	: [
-			title		: ''
-			url			: \http://
-			desc		: ''
-			tasks		: 
-				''
-		]
 	]

@@ -401,12 +401,6 @@ DATA = {
           to: 'April 2007'
         },
         tasks: ['Code HTML Emails and Newsletters', 'Design HTML Emails and Newsletters']
-      }],
-      projects: [{
-        title: '',
-        url: 'http://',
-        desc: '',
-        tasks: ''
       }]
     }
   ]
