@@ -7,3 +7,11 @@ $ !->
 		
 	# 	false
 
+
+
+Details_Controller = !($scope)-> $scope.data = DATA.details
+Education_Controller = !($scope)-> $scope.data = DATA.education
+Events_Controller = !($scope)-> $scope.data = DATA.events
+Skills_Controller = !($scope)-> $scope.data = DATA.skills
+Freelance_Controller = !($scope)-> $scope.data = DATA.freelance
+Experience_Controller = !($scope)-> $scope.data = DATA.experience

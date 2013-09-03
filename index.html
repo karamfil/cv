@@ -1,5 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head>
+<!DOCTYPE html>
+<html ng-app><head>
 
 <title>Curriculum Vitae - Alexander Ivanov</title>
 
@@ -7,104 +7,109 @@
 <link rel="stylesheet" type="text/css" href="styles/screen.css">
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
+<script type="text/javascript" src="scripts/js/data.json"></script>
 <script type="text/javascript" src="scripts/js/interface.js"></script>
 
 </head>
 <body>
 
 <div id="container">
-	<h1 id="contacts">Alexander Ivanov</h1>
-	
-	<img id="photo" alt="Alexander Antonov Ivanov" src="data:image/jpeg;base64,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"/>
-	<div id="contacts-info" class="information-set"><div class="inner">
-		<dl>
-			<dt>key</dt><dd>value</dd>
-		</dl>
-
-		<p>bio</p>
+	<div id="details" ng-controller="Details_Controller">
+		<h1 ng-bind="data.name"></h1>
 		
-		<div class="cleaner"></div>
-	</div></div>
+		<img id="photo" alt="{{data.name}}" src="data:image/jpeg;base64,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"/>
+		<div id="contacts-info" class="information-set"><div class="inner">
+			<dl>
+				<dt ng-repeat-start="d in data.details" ng-bind="d.0"></dt><dd ng-repeat-end ng-bind="d.1"></dd>
+			</dl>
+
+			<p ng-bind="data.bio"></p>
+			
+			<div class="cleaner"></div>
+		</div></div>
+	</div>
 	
-	<div id="education" class="information-set"><div class="inner">
+	<div id="education" class="information-set" ng-controller="Education_Controller"><div class="inner">
 		<h2>Education</h2>
 		
-		<h3>New Bulgarian University <span>(University)</span> <strong>Computer Science, Bachelor</strong></h3>
-		<p><strong>From:</strong> October 2009 <strong>To:</strong> July 2013</p>
+		<h3 ng-repeat-start="d in data"><strong ng-bind="d.title"></strong> (<span ng-bind="d.type"></span>) <strong ng-bind="d.major"></strong></h3>
+		<p ng-repeat-end><strong>From:</strong> <date ng-bind="d.date.from"></date> <strong>To:</strong> <date ng-bind="d.date.to"></date></p>
 	</div></div>
 	
-	<div id="events" class="information-set"><div class="inner">
+	<div id="events" class="information-set" ng-controller="Events_Controller"><div class="inner">
 		<h2>Events</h2>
 		
-		<h3>Google IO 2011 Developer Conference <!-- img src="google-io-2011.png" alt="Google I/O Developer Conference 2011" title="Google I/O Developer Conference 2011" /--></h3>
-		<p><strong>From:</strong> 10th May 2011 <strong>To:</strong> 11th May 2011</p>
-		<p>Invited by Google to present HistoryPin in Developer Sandbox</p>
+		<h3 ng-repeat-start="d in data" ng-bind="d.title"></h3>
+		<p><strong>From:</strong> <date ng-bind="d.date.from"></date> <strong>To:</strong> <date ng-bind="d.date.to"></date></p>
+		<p ng-repeat-end ng-bind="d.desc"></p>
 	</div></div>
 	
-	<div id="skills" class="information-set"><div class="inner">
+	<div id="skills" class="information-set" ng-controller="Skills_Controller"><div class="inner">
 		<div class="icon"><img src="idea.png" alt="" /></div>
 		
 		<h2>Skills</h2>
 
-		<h4 class="skills-category">Languages</h4>
-		<dl>
-			<dt>English</dt>			<dd><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl"></span><span class="lvl n"></span></dd>		<dd>Experience Since: <strong>1996</strong></dd>
+		<h4 class="skills-category" ng-repeat-start="d in data.primary" ng-bind="d.category"></h4>
+		<dl ng-repeat-end>
+			<dt ng-repeat-start="s in d.skills" ng-bind="s.2"></dt>
+			<dd><span class="lvl" ng-bind="s.1"></span><span class="lvl n"></span></dd>
+			<dd ng-repeat-end>Experience Since: <strong ng-bind="s.0"></strong></dd>
 		</dl>
 		
-		<h4 class="skills-category">Services Integration</h4>
-		<ul>
-			<li>Flickr API</li>
+		<h4 class="skills-category" ng-repeat-start="d in data.secondary" ng-bind="d.category"></h4>
+		<ul ng-repeat-end>
+			<li ng-repeat="s in d.skills" ng-bind="s"></li>
 		</ul>
 		
 		<div class="cleaner"></div>
 	</div></div>
 	
-	<div id="freelance" class="information-set selected"><div class="inner">
+	<div id="freelance" class="information-set selected" ng-controller="Freelance_Controller"><div class="inner">
 		<h2>Freelance &amp; Personal Projects</h2>
-		<div class="spacer"></div>
 		
-		<h4>Year 2011</h4>
-		<dl class="projects">
-			<dt>Architectural Studio Tectonis <a href="http://www.tectonis.com/" target="_blank">http://www.tectonis.com/</a></dt>
-			<dd>
-				<p>TO BE DESCRIBED</p>
+		<h4 ng-repeat-start="d in data" ng-bind="d.year"></h4>
+		<dl class="projects" ng-repeat-end>
+			<dt ng-repeat-start="p in d.projects"><span ng-bind="p.title"></span> <a href="{{p.url}}" target="_blank" ng-bind="p.url"></a></dt>
+			<dd ng-repeat-end>
+				<p ng-bind="p.desc"></p>
 				<ul class="project-work">
-					<li>System Architecture</li>
+					<li ng-repeat="t in p.tasks" ng-bind="t"></li>
 				</ul>
 			</dd>
 		</dl>
 	</div></div>
 	
-	<div id="avalith" class="information-set"><div class="inner">
-		<h2>Avalith <a href="http://www.avalith.bg/" target="_blank">http://www.avalith.bg/</a></h2>
-		
-		<p><strong>Position:</strong> Founder & CEO</p>
-		<p><strong>From:</strong> December 2011</p>
-		<p><strong>Responsibilities:</strong> 
-			<ul class="responsibilities">
-				<li>Manage company</li>
-			</ul>
-		</p>
-		<hr />
-		
-		<h4>Projects</h4>
-		<dl class="projects">
-			<dt>
-				Internet Buttons <a href="http://www.internetbuttons.org/" target="_blank">http://www.internetbuttons.org/</a>
-				
-				<ul class="awards">
-					<li><a href="http://www.technology4goodawards.org.uk/uncategorized/and-winners-are/">Technology4Good (2011)</a></li>
+	<div ng-controller="Experience_Controller">
+		<div id="avalith" class="information-set" ng-repeat="d in data"><div class="inner">
+			<h2><span ng-bind="d.company"></span> <a href="{{d.url}}" target="_blank" ng-bind="d.url"></a></h2>
+			
+			<p ng-repeat-start="p in d.positions"><strong>Position:</strong> <span ng-bind="p.title"></span></p>
+			<p><strong>From:</strong> <date ng-bind="p.date.from"></date> <strong>To:</strong> <date ng-bind="p.date.to"></date></p>
+			<div ng-repeat-end><strong>Responsibilities:</strong> 
+				<ul class="responsibilities">
+					<li ng-repeat="t in p.tasks" ng-bind="t"></li>
 				</ul>
-			</dt>
-			<dd>
-				<p>It's the perfect thing for anyone new to the net or is just a bit web-rubbish. So if you know any one flummoxed by tweets, links and pokes or who'd appreciate learning how to email, Skype, or shop online, why not set them up with a page of Internet Buttons today?</p>
-				<ul class="project-work">
-					<li>System Architecture</li>
-				</ul>
-			</dd>
-		</dl>
-	</div></div>
+			</div>
+			
+			<h4>Projects</h4>
+			<dl class="projects">
+				<dt ng-repeat-start="p in d.projects">
+					<span ng-bind="p.title"></span><a href="{{p.url}}" target="_blank" ng-bind="p.url"></a>
+					
+					<ul class="awards">
+						<li ng-repeat="a in p.awards"><a href="{{a.2}}"><span ng-bind="a.0"></span> (<span ng-bind="a.1"></span>)</a></li>
+					</ul>
+				</dt>
+				<dd ng-repeat-end>
+					<p ng-bind="p.desc"></p>
+					<ul class="project-work">
+						<li ng-repeat="t in p.tasks" ng-bind="t"></li>
+					</ul>
+				</dd>
+			</dl>
+		</div></div>
+	</div>
 </div>
 
 
