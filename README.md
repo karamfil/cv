@@ -1,7 +1,7 @@
 My CV
 ==
 
-## Used Technologies
+### Technologies Used
 * LiveScript
 * JQuery
 * AngularJS
