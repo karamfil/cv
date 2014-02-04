@@ -1,3 +1,3 @@
 #!/bin/bash
 
-lsc -o scripts/js -wc scripts/livescript/
+lsc -cb -o scripts/js -w scripts/livescript/
