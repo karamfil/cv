@@ -8,7 +8,7 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"></script>
-<script type="text/javascript" src="scripts/js/data.json"></script>
+<script type="text/javascript" src="scripts/js/data.js"></script>
 <script type="text/javascript" src="scripts/js/interface.js"></script>
 
 </head>
@@ -17,9 +17,12 @@
 <div id="container">
 	<div id="details" ng-controller="Details_Controller">
 		<h1 ng-bind="data.name"></h1>
-		<ul>
-			<li ng-repeat="s in data.social"><a ng-href="{s.1}" ng-bind="s.0"></a></li>
+		<ul class="social">
+			<!-- TODO download, share buttons -->
+			
+			<li ng-repeat="s in data.social"><a class="fa fa-{{s.0}}" ng-href="{{s.2}}" title="{{s.1}}"></a></li>
 		</ul>
+		<div class="cleaner"></div>
 		
 		<img id="photo" alt="{{data.name}}" ng-src="{{data.image}}"/>
 		<div id="biography">
@@ -38,35 +41,39 @@
 		<h2>Resume</h2>
 		
 		<div id="skills" ng-controller="Skills_Controller">
-			<h3 class="skills-category" ng-repeat-start="d in data.primary" ng-bind="d.category"></h3>
-			<div class="skillset" ng-repeat-end>
-				<div class="item" ng-repeat="s in d.skills">
-					<h4 ng-bind="s.2"></h4>
-					<year class="since">Experience Since: <strong ng-bind="s.0"></strong></year>
-					<div class="level-wrapper"><div class="level" style="width: {{s.1*10}}%"></div></div>
+			<div class="skill-wrapper" ng-repeat="d in data.primary">
+				<h3>{{d.category}}<i class="fa fa-{{d.icon}}"></i></h3>
+				<div class="skillset">
+					<div class="item" ng-repeat="s in d.skills">
+						<h4 ng-bind="s.2"></h4>
+						<year class="since" ng-bind="s.0"></year>
+						<div class="level-wrapper"><div class="level" style="width: {{s.1*10}}%"></div></div>
+					</div>
 				</div>
 			</div>
 			
-			<h3 class="skills-category" ng-repeat-start="d in data.secondary" ng-bind="d.category"></h3>
-			<ul ng-repeat-end>
-				<li ng-repeat="s in d.skills" ng-bind="s"></li>
-			</ul>
-			
-			<div class="cleaner"></div>
+			<div class="skill-wrapper secondary" ng-repeat="d in data.secondary">
+				<h3>{{d.category}}<i class="fa fa-{{d.icon}}"></i></h3>
+				<div class="skillset">
+					<a class="item" ng-repeat="s in d.skills" ng-bind="s.0" ng-href="{{s.1}}"></a>
+				</div>
+			</div>
 		</div>
 		
 		<div id="info">
 		
 			<div id="education" ng-controller="Education_Controller">
-				<h3>Education</h3>
-				
+				<h3>Education &amp; Certification</h3>
 				
 				<div class="item-wrapper" ng-repeat="d in data">
-					<div class="item">
+					<div class="item title">
 						<h4 ng-bind="d.title"></h4>
-						<p><date ng-bind="d.date.from"></date> - <date ng-bind="d.date.to"></date></p>
-						<h5><strong ng-bind="d.major"></strong></h5>
+						<date class="date-start">{{d.date.from}}</date>
+						<h5 ng-bind="d.major"></h5>
 						<p>(<span ng-bind="d.type"></span>)</p>
+						<date class="date-end">to {{d.date.to}}</date>
+						<div class="cleaner"></div>
+						
 					</div>
 				</div>
 			</div>
@@ -75,50 +82,75 @@
 				<h3>Events</h3>
 				
 				<div class="item-wrapper" ng-repeat="d in data">
-					<div class="item" ng-repeat="d in data">
-						<h4 ng-bind="d.title"></h4>
-						<p><date ng-bind="d.date.from"></date> - <date ng-bind="d.date.to"></date></p>
+					<div class="item title" ng-repeat="d in data">
+						<date class="date-start">{{d.date.from}}</date>
+						<h5 ng-bind="d.title"></h5>
+						<date class="date-end">{{d.date.to}}</date>
+						<div class="cleaner"></div>
+						
 						<p ng-bind="d.desc"></p>
 					</div>
 				</div>
 			</div>
 			
+			<div id="events" ng-controller="Awards_Controller">
+				<h3>Awards</h3>
+				
+				<div class="item-wrapper">
+					<div class="item title" ng-repeat="d in data">
+						<date class="date-start">{{d[4]}}</date>
+						<h5>{{d[0]}} won <a href="{{d[5]}}">{{d[2]}}</a> award</h5>
+						<date class="date-end"><a href="{{d[1]}}">{{d[1]}}</a></date>
+						<div class="cleaner"></div>
+						
+						<!-- <p ng-bind="d.desc"></p> -->
+					</div>
+				</div>
+			</div>
+			
 			<div ng-controller="Experience_Controller">
-				<h3>Professional Experience</h3>
+				<h3>Work Experience</h3>
 				
 				<div class="item-wrapper" ng-repeat="d in data">
-					<div class="item">
-						<h4><span ng-bind="d.company"></span> <a ng-href="{{d.url}}" target="_blank" ng-bind="d.url"></a></h4>
-						
-						<p ng-repeat-start="p in d.positions"><strong>Position:</strong> <span ng-bind="p.title"></span></p>
-						<p><date ng-bind="p.date.from"></date> - <date ng-bind="p.date.to"></date></p>
-						<div ng-repeat-end><strong>Responsibilities:</strong> 
-							<ul class="responsibilities">
-								<li ng-repeat="t in p.tasks" ng-bind="t"></li>
-							</ul>
-						</div>
-						
-						<div class="projects-container">
-							<h4>{{d.company}}: Projects</h4>
-							<dl class="projects">
-								<dt ng-repeat-start="p in d.projects">
-									<span ng-bind="p.title"></span>
-									<a ng-href="{{p.url}}" target="_blank" ng-bind="p.url"></a>
-									
-									<ul class="awards">
-										<li ng-repeat="a in p.awards"><a ng-href="{{a.2}}"><span ng-bind="a.0"></span> (<span ng-bind="a.1"></span>)</a></li>
-									</ul>
-								</dt>
-								<dd ng-repeat-end>
-									<p ng-bind="p.desc"></p>
-									<ul class="project-work">
-										<li ng-repeat="t in p.tasks" ng-bind="t"></li>
-									</ul>
-								</dd>
-							</dl>
-						</div>
-						
+					<div class="item title">
+						<h4 ng-bind="d.company"></h4>
+						<a ng-if="d.url" ng-href="{{d.url}}" target="_blank" ng-bind="d.url"></a>
 					</div>
+					
+					<div class="position item" ng-repeat="p in d.positions">
+						<date class="date-start">{{p.date.from}}</date>
+						<h5 ng-bind="p.title"></h5>
+						<date class="date-end">to {{p.date.to}}</date>
+						<div class="cleaner"></div>
+						
+						<h6 ng-if="p.tasks">Responsibilities:</h6>
+						<ul class="responsibilities">
+							<li ng-repeat="t in p.tasks"><i class="fa fa-angle-double-right"></i> {{t}}</li>
+						</ul>
+					</div>
+					
+					<div class="projects-container">
+						<!-- <h6>Projects</h6> -->
+						<div class="item projects">
+							<div class="" ng-repeat="p in d.projects">
+								<h6><i class="fa fa-plus-square-o"></i> {{p.title}}</h6>
+								
+								<div class="cnt">
+									<a ng-href="{{p.url}}" target="_blank" ng-bind="p.url"></a>
+									<ul class="awards">
+										<li ng-repeat="a in p.awards"><a ng-href="{{a.2}}"><i class="fa fa-trophy"></i> <date ng-bind="a.1"></date> <span ng-bind="a.0"></span></a></li>
+									</ul>
+									
+									<p ng-bind="p.desc"></p>
+									
+									<ul class="project-work">
+										<li ng-repeat="t in p.tasks"><i class="fa fa-check"></i> {{t}}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+						
 				</div>
 					
 			</div>
